@@ -30,15 +30,15 @@ document.getElementById("jokeSubmit").addEventListener("click", function (event)
 
 document.getElementById("quoteSubmit").addEventListener("click", function (event) {
     event.preventDefault();
-    const url = "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
+    const url = "https://ron-swanson-quotes.herokuapp.com/v2/quotes";
     fetch(url)
         .then(function (response) {
             return response.json();
         }).then(function (json) {
             console.log(json);
             let results = "";
-            results += '<img src="file-light-bulb-yellow-icon-svg-2.png"><br>';
-            results += json[0].content;
+            results += '<img src="kisspng-ron-swanson-parks-and-recreation-pawnee-character-5af4d498a1c421.5158804515259946486626.png"><br>';
+            results += "<br><p>" + json[0] + "</p>";
             document.getElementById("buttonResults").innerHTML = results;
         });
 });
