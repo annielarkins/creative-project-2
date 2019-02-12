@@ -15,7 +15,7 @@ document.getElementById("adviceSubmit").addEventListener("click", function (even
 
 document.getElementById("jokeSubmit").addEventListener("click", function (event) {
     event.preventDefault();
-    const url = "https://geek-jokes.sameerkumar.website/api";
+    const url = "https://icanhazdadjoke.com/";
     fetch(url)
         .then(function (response) {
             return response.json();
