@@ -27,3 +27,18 @@ document.getElementById("quoteSubmit").addEventListener("click", function (event
             document.getElementById("buttonResults").innerHTML = results;
         });
 });
+
+document.getElementById("jokeSubmit").addEventListener("click", function (event) {
+    event.preventDefault();
+    const url = "https://geek-jokes.sameerkumar.website/apis";
+    fetch(url)
+        .then(function (response) {
+            return response.json();
+        }).then(function (json) {
+            console.log(json);
+            let results = "";
+            results += '<img src="joke.png"><br>';
+            results += "<br><p>" + json[0] + "</p>";
+            document.getElementById("buttonResults").innerHTML = results;
+        });
+});
