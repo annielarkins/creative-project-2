@@ -30,7 +30,7 @@ document.getElementById("quoteSubmit").addEventListener("click", function (event
 
 document.getElementById("jokeSubmit").addEventListener("click", function (event) {
     event.preventDefault();
-    const url = "https://opentdb.com/api.php?amount=1&type=multiple";
+    const url = "https://opentdb.com/api.php?amount=1&type=boolean";
     fetch(url)
         .then(function (response) {
             return response.json();
@@ -38,7 +38,7 @@ document.getElementById("jokeSubmit").addEventListener("click", function (event)
             console.log(json);
             let results = "";
             results += '<img src="joke.png"><br>';
-            results += "<br><p>" + json.results[0].question + "</p>";
+            results += "<br><p> True or False? " + json.results[0].question + "</p>";
             document.getElementById("buttonResults").innerHTML = results;
         });
 });
