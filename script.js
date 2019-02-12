@@ -38,7 +38,7 @@ document.getElementById("jokeSubmit").addEventListener("click", function (event)
             console.log(json);
             let results = "";
             results += '<img src="joke.png"><br>';
-            results += "<br><p>" + json[0] + "</p>";
+            results += "<br><p>" + json + "</p>";
             document.getElementById("buttonResults").innerHTML = results;
         });
 });
