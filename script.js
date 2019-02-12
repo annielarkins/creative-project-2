@@ -13,21 +13,6 @@ document.getElementById("adviceSubmit").addEventListener("click", function (even
         });
 });
 
-document.getElementById("jokeSubmit").addEventListener("click", function (event) {
-    event.preventDefault();
-    const url = "";
-    fetch(url)
-        .then(function (response) {
-            return response.json();
-        }).then(function (json) {
-            console.log(json);
-            let results = "";
-            results += '<img src="joke.png"> <br>';
-            results += "<br><p>" + json + "</p>";
-            document.getElementById("buttonResults").innerHTML = results;
-        });
-});
-
 document.getElementById("quoteSubmit").addEventListener("click", function (event) {
     event.preventDefault();
     const url = "https://ron-swanson-quotes.herokuapp.com/v2/quotes";
