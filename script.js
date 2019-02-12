@@ -30,7 +30,7 @@ document.getElementById("quoteSubmit").addEventListener("click", function (event
 
 document.getElementById("jokeSubmit").addEventListener("click", function (event) {
     event.preventDefault();
-    const url = "https://geek-jokes.sameerkumar.website/apis";
+    const url = "https://geek-jokes.sameerkumar.website/api";
     fetch(url)
         .then(function (response) {
             return response.json();
