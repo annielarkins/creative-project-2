@@ -15,7 +15,7 @@ document.getElementById("adviceSubmit").addEventListener("click", function (even
 
 document.getElementById("jokeSubmit").addEventListener("click", function (event) {
     event.preventDefault();
-    const url = "https://icanhazdadjoke.com/";
+    const url = "";
     fetch(url)
         .then(function (response) {
             return response.json();
